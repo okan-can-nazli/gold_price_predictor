@@ -16,5 +16,15 @@ A time-series forecasting model built with PyTorch to predict future gold prices
 ## How to Run
 
 1. Make sure you have the required dependencies installed:
-   ```bash
-   pip install torch yfinance scikit-learn numpy
+
+        pip install torch yfinance scikit-learn numpy pandas
+
+2. **Important: Fetch the data first!** Run the data scrapper to download the latest gold prices and generate the local `real_db.json` database:
+
+        python data_scrapper.py
+
+3. Run the main script to train the model and start the prediction interface:
+
+        python main.py
+
+4. When prompted, enter a future date (in `YYYY-MM-DD` format) to see the step-by-step price prediction per gram.
